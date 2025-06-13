@@ -1,0 +1,11 @@
+@use 'vars' as *;
+
+.swiper {
+  left: -$p-xl;
+  width: calc(100% + $p-xl * 2);
+  padding: 0 $p-xl;
+}
+
+.swiper-slide {
+  height: auto;
+}

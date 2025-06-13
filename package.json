@@ -1,0 +1,53 @@
+{
+  "name": "template",
+  "version": "1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "check": "npm run lint:fix && npm run lint:css:fix",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "lint:css": "stylelint \"src/**/*.{scss,css}\"",
+    "lint:css:fix": "stylelint \"src/**/*.{scss,css}\" --fix"
+  },
+  "dependencies": {
+    "@altricade/react-mask-field": "^1.2.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "clsx": "^2.1.1",
+    "motion": "^12.6.5",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.6",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.25.0",
+    "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.3.1",
+    "eslint-plugin-boundaries": "^5.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "husky": "^9.1.7",
+    "jiti": "^2.4.2",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.3",
+    "stylelint": "^16.18.0",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "typescript": "^5"
+  }
+}

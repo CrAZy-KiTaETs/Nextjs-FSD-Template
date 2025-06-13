@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-clean-order",
+    "stylelint-config-css-modules"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "selector-id-pattern": null,
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": null,
+    "no-empty-source": null,
+    "scss/function-no-unknown": [true, { "ignoreFunctions": ["rem"] }]
+  },
+  "ignoreFiles": ["**/node_modules/**", "**/.next/**", "**/dist/**", "**/build/**"]
+}

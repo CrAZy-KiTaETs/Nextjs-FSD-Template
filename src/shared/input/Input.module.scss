@@ -1,0 +1,57 @@
+@use 'vars' as *;
+
+.errorMsg {
+  display: none;
+
+  width: 100%;
+  padding-top: $p-xxxs;
+
+  font-size: $s-12;
+  color: $warning;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    padding-bottom: $p-l;
+  }
+
+  input {
+    padding: $p-s $p-m;
+    border: 1px solid red;
+    border-radius: $r-xs;
+
+    font-size: $s-14;
+
+    outline: none;
+
+    transition: 0.3s ease;
+
+    &::placeholder {
+      color: $placeholder;
+    }
+
+    &:focus {
+      border-color: blue;
+    }
+
+    &[data-error='true'] {
+      border-color: $warning;
+
+      & ~ .errorMsg {
+        display: block;
+      }
+    }
+
+    &:invalid[data-focused='true'] {
+      border-color: $warning;
+
+      & ~ .errorMsg {
+        display: block;
+      }
+    }
+  }
+}

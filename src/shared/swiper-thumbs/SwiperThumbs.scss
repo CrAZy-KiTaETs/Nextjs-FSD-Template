@@ -1,0 +1,162 @@
+@use 'vars' as *;
+
+.swiper-hide {
+  .swiper {
+    position: absolute !important;
+    opacity: 0 !important;
+  }
+}
+
+#swiper-thumbs-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .swiper {
+    left: 0;
+    width: 100%;
+
+    // padding: 0 $i-m;
+    padding: 0;
+    border-radius: $r-m;
+
+    &__prev,
+    &__next {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: grid;
+      place-content: center;
+
+      width: 56px;
+      height: 35px;
+      border-radius: $r-s;
+
+      background: blue;
+
+      @include tablet {
+        width: 40px;
+        height: 28px;
+
+        svg {
+          width: 7px !important;
+        }
+      }
+    }
+
+    &__prev {
+      left: 24px;
+
+      svg {
+        rotate: 180deg;
+      }
+
+      @include tablet {
+        left: 16px;
+      }
+
+      @include mobile-big {
+        left: 8px;
+      }
+    }
+
+    &__next {
+      right: 24px;
+
+      @include tablet {
+        right: 16px;
+      }
+
+      @include mobile-big {
+        right: 8px;
+      }
+    }
+
+    &-button-disabled {
+      background: blue-disabled;
+    }
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    border-radius: $r-m;
+  }
+
+  .swiper-skeleton-wrapper {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 500px 200px;
+    gap: 16px;
+
+    width: 100%;
+    height: 100%;
+    border-radius: $r-m;
+
+    span {
+      border-radius: $r-m;
+    }
+
+    &__footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @include tablet-big {
+      grid-template-rows: 400px 150px;
+      max-height: 550px;
+    }
+
+    @include mobile-big {
+      grid-template-rows: 300px 100px;
+      max-height: 400px;
+    }
+  }
+}
+
+#main-swiper {
+  max-height: 500px;
+  margin-bottom: $i-m;
+
+  @include tablet {
+    margin-bottom: $i-s;
+  }
+
+  @include mobile-big {
+    margin-bottom: $i-xs;
+  }
+
+  .swiper-slide {
+    max-height: 500px;
+
+    @include tablet-big {
+      max-height: 400px;
+    }
+
+    @include mobile-big {
+      max-height: 300px;
+    }
+  }
+}
+
+#second-swiper {
+  .swiper-slide {
+    cursor: pointer;
+    max-height: 200px;
+
+    @include tablet-big {
+      max-height: 150px;
+    }
+
+    @include mobile-big {
+      max-height: 100px;
+    }
+  }
+}
+
+.swiper-thumb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,26 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "vs-code-prettier-eslint.prettierLast": false,
+  "files.eol": "\n",
+  "stylelint.validate": ["css", "scss"],
+  "stylelint.snippet": ["css", "scss"], // Поддержка автодополнения для CSS/SCSS
+  "stylelint.lintDirtyFilesOnly": true, // Проверять все файлы, а не только изменённые
+  "cSpell.enabled": true, // Включить проверку орфографии
+  "cSpell.language": "en,ru", // Поддержка английского и русского языков
+  "path-intellisense.mappings": {
+    "/": "${workspaceFolder}/public"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always", // Обновлять импорты при перемещении файлов
+  "typescript.updateImportsOnFileMove.enabled": "always", // Обновлять импорты в TypeScript
+  "typescript.preferences.quoteStyle": "single", // Использовать одинарные кавычки в TypeScript
+  "editor.tabSize": 2, // Установить размер табуляции в 2 пробела
+  "editor.wordWrapColumn": 100, // Установить ширину переноса строк в 100 символов
+  "editor.wordWrap": "bounded", // Переносить слова в пределах заданной ширины
+  "javascript.preferences.quoteStyle": "single" // Использовать одинарные кавычки в JavaScript
+}

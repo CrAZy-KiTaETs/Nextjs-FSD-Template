@@ -1,0 +1,34 @@
+@use 'vars' as *;
+
+.input {
+  padding: $p-s $p-m;
+  border: 1px solid red;
+  border-radius: $r-xs;
+
+  font-size: $s-14;
+
+  outline: none;
+
+  transition: 0.3s ease;
+
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:focus {
+    border-color: blue;
+  }
+
+  & + div {
+    display: none;
+    color: $warning !important;
+  }
+
+  &[data-error='true'] {
+    border-color: $warning;
+
+    & + div {
+      display: block;
+    }
+  }
+}
